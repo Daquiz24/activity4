@@ -1,0 +1,54 @@
+/* Tutorial made by Rene-F for AppSeed.us | 2022 | https://github.com/Rene-F */
+
+[data-theme="dark"]
+{
+  background: rgba(3, 184, 159, 0.445);
+  color: #0042f7;
+}
+
+[data-theme="dark"] .bg-black {
+  background-color: #3e08d1 !important;
+}
+
+[data-theme="dark"] .bg-dark {
+  background-color: #0293a7 !important;
+}
+
+[data-theme="dark"] .bg-light {
+  background-color: #0a0a0a !important;
+}
+
+[data-theme="dark"] .bg-white {
+  background-color: #021407 !important;
+}
+
+[data-theme="dark"] .card-chart
+{
+  background: rgb(204, 109, 109);
+}
+
+[data-theme="dark"] .chart
+{
+  background: rgb(118, 168, 152) !important;
+  color: #0c4244;
+}
+
+[data-theme="dark"] .card-table
+{
+  background: rgb(23, 23, 53);
+  color: #1e214d;
+}
+
+[data-theme="dark"] .data-table
+{
+  background: rgb(25, 67, 70) !important;s
+  color:  rgb(61, 114, 94);
+}
+
+[data-theme="dark"] tr:nth-child(even)
+{
+  background: rgb(156, 160, 197) !important;
+  color:  rgb(77, 48, 124);
+}
+
+/* Tutorial made by Rene-F for AppSeed.us | 2022 | https://github.com/Rene-F */
