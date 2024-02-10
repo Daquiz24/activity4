@@ -34,8 +34,8 @@ nav a {
     height: auto;
 }
 
-.container mt-5 {
-    margin-top: 50px;
+.container.mt-5 {
+    margin-top: 50px; /* corrected selector */
 }
 
 .footer {
@@ -67,4 +67,3 @@ nav a {
         height: auto;
     }
 }
-
