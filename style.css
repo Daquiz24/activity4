@@ -1,0 +1,70 @@
+/* Add this to your style.css file */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0099ff;
+}
+
+header {
+    background-color: #6303e0;
+    padding: 15px;
+    color: #0051ff;
+    text-align: center;
+}
+
+nav a {
+    color: #002fff;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.logo {
+    max-width: 50px;
+    max-height: 50px;
+}
+
+#imageSlider {
+    margin-top: 20px;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: auto;
+}
+
+.container mt-5 {
+    margin-top: 50px;
+}
+
+.footer {
+    background-color: #001b92;
+    color: #0747f7;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+.footer a {
+    color: #0011ff;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .carousel-inner img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
