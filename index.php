@@ -40,7 +40,7 @@ require_once 'config/db.php';
          <nav>
             <div>
                 <a href="#">Home</a>
-                <a href="#">Contact US</a>
+                <a href="index.html">Contact US</a>
                 <a href="#" data-bs-toggle="modal" data-bs-target="#enrollModal">Enroll Now</a>
                 <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
             </div>
