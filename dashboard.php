@@ -16,7 +16,7 @@ $role = $_SESSION["role"];
 <html lang="en">
 <head>
 
-  <title>Admin Dashboard - Free Bootstrap 5 Sample | AppSeed </title>
+  <title> E grad </title>
 
   <link rel="canonical" href="https://blog.appseed.us/bootstrap-for-beginners-with-examples/" />
 
@@ -51,7 +51,8 @@ $role = $_SESSION["role"];
         <h2>Admin</h2>
         <ul>
             <li><a href="dashboard.php">Dashboard</a></li>
-           
+            <li><a href="apointment.php">Appointment</a></li>
+            <li><a href="messenging.php">Messenging</a></li>
        
         </ul>
     </aside>
@@ -253,7 +254,7 @@ if ($result) {
                   echo '<tr>';
                   echo '<td>' . $row['id'] . '</td>';
                  
-                  echo '<td><img src="photos/' . $row["picture_path"] . '" alt="' . $row["picture_path"] . '"></td>';
+                  echo '<td><img src="photos/' . $row["picture_path"] . '" alt="' . $row["picture_path"] . '" width="100" height="100"></td>';
                   echo '<td>';
                   echo '<form action="config/cover.php" method="post" style="display: inline;">';
                   echo '<input type="hidden" name="deleteId" value="' . $row['id'] . '">';
@@ -272,6 +273,9 @@ if ($result) {
   </table>
 </div>
 
+<br>
+<br>
+<br>
 
 
 <div>
@@ -408,7 +412,7 @@ if ($result) {
                     <input type="color" id="color" name="color">
                     <br>
                     <br>
-                    <input type="submit" name="add_card" value="Add Card">
+                    <input type="submit" name="add_card" class="btn btn-success" value="Add Card">
                 </form>
             </div>
         </div>
@@ -438,7 +442,7 @@ if ($result) {
           echo "<input type='number' id='size' name='size' value='" . $row['size'] . "' max='5'><br>";
           echo "<label for='color'>Color:</label>";
           echo "<input type='color' id='color' name='color' value='" . $row['background_color'] . "'><br>";
-          echo "<input type='submit' name='update_card' value='Update' style='margin-right: 10px;'><input type='submit' name='delete_card' value='Delete'>";
+          echo "<input type='submit' class='btn btn-primary' name='update_card' value='Update' style='margin-right: 5px;'><input type='submit' class ='btn btn-danger' name='delete_card' value='Delete'>";
           echo "</form>";
 
           // Form for delete button
@@ -457,186 +461,177 @@ if ($result) {
 
 <style>
   body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-        }
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
 
-        aside {
-            width: 200px;
-            max-width: 100%;
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            position: fixed;
-            height: 100%; /* Ensures the sidebar takes full height */
-            overflow-y: auto; /* Enables scrolling for the sidebar if its content is too long */
-        }
+aside {
+    width: 200px;
+    max-width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    height: 100%;
+    overflow-y: auto;
+}
 
-        aside h2 {
-            margin-bottom: 10px;
-        }
+aside h2 {
+    margin-bottom: 10px;
+}
 
-        aside ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
+aside ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 
-        aside li {
-            margin-bottom: 10px;
-        }
+aside li {
+    margin-bottom: 10px;
+}
 
-        aside a {
-            color: #fff;
-            text-decoration: none;
-        }
+aside a {
+    color: #fff;
+    text-decoration: none;
+}
 
-        aside a:hover {
-            text-decoration: underline;
-        }
+aside a:hover {
+    text-decoration: underline;
+}
 
-        main {
-            flex: 1;
-            padding: 20px;
-            margin-left: 200px; /* Adjust this margin to match the width of the sidebar */
-        }
+main {
+    flex: 1;
+    padding: 20px;
+    margin-left: 200px;
+}
 
-        @media (max-width: 768px) {
-            body {
-                flex-direction: column;
-            }
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
 
-            aside {
-                width: 100%;
-                max-width: 100%;
-                box-sizing: border-box;
-                padding: 10px;
-                position: static; /* Reset position for small screens */
-            }
+    aside {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        padding: 10px;
+        position: static;
+    }
 
-            main {
-                margin-left: 0; /* Reset margin for small screens */
-            }
-        
-        }
+    main {
+        margin-left: 0;
+    }
+}
 
-/* Style for the button */
 .btn-primary {
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-        }
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
 
-        /* Style for the modal */
-        .modal-content {
-            background-color: #fff;
-            border-radius: 10px;
-        }
+.modal-content {
+    background-color: #fff;
+    border-radius: 10px;
+}
 
-        .modal-header {
-            background-color: #007bff;
-            color: #fff;
-            border-radius: 10px 10px 0 0;
-        }
+.modal-header {
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 10px 10px 0 0;
+}
 
-        .modal-title {
-            font-size: 1.5rem;
-        }
+.modal-title {
+    font-size: 1.5rem;
+}
 
-        /* Style for the form inside the modal */
-        form {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            margin-top: 20px;
-        }
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
 
-        .form-label {
-            font-weight: bold;
-        }
+.form-label {
+    font-weight: bold;
+}
 
-        .form-control {
-            padding: 10px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
+.form-control {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
 
-        .btn-primary-modal {
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-        }
+.btn-primary-modal {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
 
-        .btn-primary-modal:hover {
-            background-color: #0056b3;
-        }
+.btn-primary-modal:hover {
+    background-color: #0056b3;
+}
 
-        /* Style for the image view */
-        .image-view {
-            margin-top: 20px;
-            text-align: center;
-        }
+.image-view {
+    margin-top: 20px;
+    text-align: center;
+}
 
-        .image-view img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        }
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-        }
+.image-view img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+.container {
+    max-width: 2200px;
+    margin: 0 auto;
+    padding: 20px;
+}
 
-        .row {
-            display: flex;
-            flex-wrap: wrap;
-            margin: -15px; /* Negative margin to compensate for column padding */
-        }
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+}
 
-        .column {
-            flex: 0 0 calc(33.33% - 30px); /* Adjust the column width based on the number of columns */
-            max-width: calc(33.33% - 30px); /* Adjust the column width based on the number of columns */
-            margin: 15px; /* Column padding */
-        }
 
-        .card {
-            background-color: #f4f4f4;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
+.column {
+    flex: 0 0 calc(33.33% - 30px);
+    max-width: calc(33.33% - 30px);
+    margin: 15px;
+    box-sizing: border-box;
+}
+.card {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
-        .my-form {
-            margin-bottom: 20px;
-        }
+.my-form {
+    margin-bottom: 20px;
+}
 
-        /* Responsive layout */
-        @media screen and (max-width: 768px) {
-            .column {
-                flex: 0 0 calc(50% - 30px);
-                max-width: calc(50% - 30px);
-            }
-        }
+@media screen and (max-width: 768px) {
+    .column {
+        flex: 0 0 calc(50% - 30px);
+        max-width: calc(50% - 30px);
+    }
+}
 
-        @media screen and (max-width: 576px) {
-            .column {
-                flex: 0 0 100%;
-                max-width: 100%;
-            }
-        }
+@media screen and (max-width: 576px) {
+    .column {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
 </style>

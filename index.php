@@ -40,8 +40,8 @@ require_once 'config/db.php';
          <nav>
             <div>
                 <a href="#">Home</a>
-                <a href="index.html">Contact US</a>
-                <a href="#" data-bs-toggle="modal" data-bs-target="#enrollModal">Enroll Now</a>
+                <a href="contactus.php">Contact US</a>
+                <a href="enrollment.php" >Enroll Now</a>
                 <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
             </div>
         </nav>
@@ -338,5 +338,8 @@ if ($result->num_rows > 0) {
         /* Align the logo in the footer */
         .footer .logo {
             margin-right: 0; /* Remove margin to align the logo to the left in the footer */
+        }
+        .hidden-content {
+            display: none;
         }
   </style>
